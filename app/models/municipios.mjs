@@ -2,22 +2,22 @@
 
 import psql from 'sequelize'
 import DB from '../core/Connection.mjs'
-import Municipios from './municipios.mjs';
+import Departamentos from './departamentos.mjs';
 
-class Departamentos extends psql.Model {
-  static associate() {
-    this.hasMany(Municipios)
+class Municipios extends psql.Model {
+  static associate() { 
+    this.belongsTo(Departamentos, { foreignKey: 'id_departamento' });
   }
 }
 
-Departamentos.init({
+Municipios.init({
   name:
   {
     type: psql.Sequelize.STRING,
   },
-  codigo:
+  id_departamento:
   {
-    type: psql.Sequelize.STRING,
+    type: psql.Sequelize.INTEGER,
   },
   createdAt: {
     type: psql.Sequelize.DATE,
@@ -28,7 +28,7 @@ Departamentos.init({
 }, {
   timestamps: false,
   sequelize: DB.connect(),
-  tableName: 'departamentos',
+  tableName: 'municipios',
 });
 
-export default Departamentos;
+export default Municipios;
