@@ -1,7 +1,7 @@
-import app from "./src/app.js"
+import app from "./src/app.mjs"
 
 const puerto = 3000;
 
 app.listen(puerto, () => {
-    console.log(`APP - [${puerto}]`);
+    console.log(`Corriendo aplicación - puerto: [${puerto}]`);
 })
