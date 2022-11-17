@@ -6,7 +6,9 @@ import Municipios from './municipios.mjs';
 
 class Departamentos extends psql.Model {
   static associate() {
-    this.hasMany(Municipios)
+    this.hasMany(Municipios, {
+      foreignKey: 'id_departamento'
+    })
   }
 }
 
