@@ -9,12 +9,12 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    queryInterface.addConstraint('municipios', {
+    queryInterface.addConstraint('ctl_municipios', {
       fields: ['id_departamento'],
       type: 'foreign key',
       name: 'fk_municipio_departamento',
       references: { //Required field
-        table: 'departamentos',
+        table: 'ctl_departamentos',
         field: 'id'
       },
       onDelete: 'cascade',
@@ -29,6 +29,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.removeConstraint('municipios', 'fk_municipio_departamento');
+    await queryInterface.removeConstraint('ctl_municipios', 'fk_municipio_departamento');
   }
 };

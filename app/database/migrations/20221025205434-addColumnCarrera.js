@@ -10,10 +10,10 @@ module.exports = {
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
     await [
-      queryInterface.addColumn('Carreras', 'codigo', {
+      queryInterface.addColumn('mnt_carreras', 'codigo', {
         type: Sequelize.STRING,
       }),
-      queryInterface.addColumn('Carreras', 'municipio', {
+      queryInterface.addColumn('mnt_carreras', 'municipio', {
         type: Sequelize.INTEGER,
       }),
     ]
@@ -28,8 +28,8 @@ module.exports = {
      * await queryInterface.dropTable('users');
      */
     await [
-      queryInterface.removeColumn('Carreras', 'codigo'),
-      queryInterface.removeColumn('Carreras', 'municipio')
+      queryInterface.removeColumn('mnt_carreras', 'codigo'),
+      queryInterface.removeColumn('mnt_carreras', 'municipio')
     ]
   }
 };

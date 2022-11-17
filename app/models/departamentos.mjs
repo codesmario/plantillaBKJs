@@ -30,7 +30,7 @@ Departamentos.init({
 }, {
   timestamps: false,
   sequelize: DB.connect(),
-  tableName: 'departamentos',
+  tableName: 'ctl_departamentos',
 });
 
 export default Departamentos;

@@ -28,7 +28,7 @@ Municipios.init({
 }, {
   timestamps: false,
   sequelize: DB.connect(),
-  tableName: 'municipios',
+  tableName: 'ctl_municipios',
 });
 
 export default Municipios;

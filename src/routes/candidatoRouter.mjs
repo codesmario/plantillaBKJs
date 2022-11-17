@@ -1,8 +1,8 @@
 import { Router } from "express";
-import CandidatoController from "../../app/controller/CandidatoController.mjs";
+import EstudianteController from "../../app/controller/EstudianteController.mjs";
 
 const router = Router()
 
-router.post('/', CandidatoController.store);
+router.post('/', EstudianteController.store);
 
 export default router;
